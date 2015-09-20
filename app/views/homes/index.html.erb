@@ -1,0 +1,14 @@
+<h1>
+  Let's save our skin!
+</h1>
+
+<% if user_signed_in? %>
+  <div><h3>Hello <%= current_user.email %></h3></div>
+<% end %>
+<br />
+<br />
+<br />
+
+<% if user_signed_in? %>
+  <%=link_to "Start Reminders", user_reminders_path(current_user.id), method: :post, id: "trigger"%>
+<% end %>
